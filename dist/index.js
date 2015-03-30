@@ -489,9 +489,10 @@ Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfi
 
         scope.$on('setDate', function (event, date, view) {
           updateInput(event);
-          if (dismiss && views[views.length - 1] === view) {
             clear();
-          }
+          // if (dismiss && views[views.length - 1] === view) {
+            // clear();
+          // }
         });
 
         scope.$on('$destroy', clear);
